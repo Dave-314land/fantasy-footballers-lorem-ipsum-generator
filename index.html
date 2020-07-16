@@ -37,23 +37,40 @@
   </header>
   <!-- end of header -->
   <!-- main -->
-  <main>
+  <main class="content-wrapper">
     <section class="hero-section">
       <div class="welcome-box">
         <h3>Welcome to The Fantasy Footballers Lorem Ipsum Generator!</h3>
       </div> <!--closing welcome-box-->
+    </section> <!-- closing hero-section -->
+    <!-- aside -->
+    <aside>
       <div class="description">
         <p><span>Tired of boring lorem ipsum?</span> Energize your content with fantasy football 
           and Double Stuf OREO related copywright inspired by The Fantasy Footballers Podcast!
         </p>
       </div> <!-- closing description -->
-    </section> <!-- closing hero-section -->
+      <!-- form -->
+      <form ng:submit="generateParagraphs()">
+        <label for="number-of-paragraphs"><input id="number-of-paragraphs" name="numberOfParagraphs" />Paragraphs</label>
+        <div id="length-of-paragraph">
+          <label><input name="lengthOfParagraph" type="radio" value="long" />Long</label>
+          <label><input name="lengthOfParagraph" type="radio" value="medium" />Medium</label>
+          <label><input name="lengthOfParagraph" type="radio" value="short" />Short</label>
+        </div> <!-- closing length-of-paragraph-->
+        <label><input name="startsWithFantasyFootballersIpsum" type="checkbox" />Start with<br><span>"The Fantasy Footballers Podcast ipsum"</span></label>
+        <div class="button-with-shadow generate">
+          <button id="generate-button">Generate</button>
+          <div class="shadow">
+          </div> <!-- closing shadow -->
+        </div> <!--- closing button-with-shadow generate-->
+      </form>
+      <ng:view></ng:view>
+      <img src="img/tffb-group-1.png" class="group-photo" alt="group photo 1" />
+    </aside>
+    <!-- end of aside -->
   </main> 
   <!-- end of main -->
-  <aside>
-    <img src="img/tffb-group-1.png" class="generate-group-photo" alt="group photo 1" />
-  </aside>
-    
 
   
   

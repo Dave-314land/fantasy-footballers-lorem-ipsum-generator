@@ -143,6 +143,7 @@ img {
 }
 
 .content-wrapper {
+  background-color: #000;
   margin: 0;
   width: 100%;
 }
@@ -154,10 +155,6 @@ header {
   flex-flow: row wrap;
   justify-content: center;
   padding: 0;
-}
-
-.content-wrapper {
-  background-color: #000;
 }
 
 .logo {
@@ -179,32 +176,16 @@ header {
 
 /* ----------------- Main ------------------ */
 
-.hero-section {
-  align-items: center;
+ main {
+  background: url('../img/background-image.png') center repeat;
+  background-size: contain;
   display: flex;
   flex-flow: row wrap;
-  height: 450px;
-  justify-content: center;
-  position: relative;
-  width: auto;
-}
-
-.hero-section::before {
-  background: url('../img/background-image.png') center no-repeat;
-  background-size: cover;
-  content: "";
-  opacity: 0.10;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
 }
 
 .welcome-box {
   background-color: #42AB4E;
   border: 2px #000 solid;
-  position: relative;
   width: 90%;
 }
 
@@ -215,9 +196,7 @@ header {
 }
 
 .description {
-  position: relative;
   display: flex;
-  flex-flow: row;
   width: 90%;
 }
 
@@ -232,6 +211,14 @@ header {
   margin: 0;
 }
 
+aside {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+aside form {
+  border: 1px #000 solid;
+}
 
 
 /* ==========================================================================
