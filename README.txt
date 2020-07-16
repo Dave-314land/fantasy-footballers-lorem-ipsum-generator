@@ -1,22 +1,19 @@
-The Fantasy Footballers Lorem Ipsum Generator / Jason Mooreisms Lorem Ipsum Generator
+The Fantasy Footballers Lorem Ipsum Generator
 
-Future idea (The Fantasy Footballers video game - you can play either Jason, Mike or Andy - shoot Oreos as weapons (Tony Meatball comes in to help every once and a while)
+What?
+Lorem ipsum generator of The Fantasy Footballers Podcast related content
 
+Takes list of phrases from the podcast, inserts into a javascript array and will generate a random order of phrases based on the configuration selected by the user.
 
-Main feature - lorem ipsum generator of Jason Mooreisms
-
-
-Full list of Jason Mooreisms (alphabetical)- make into an array - also make a full dictionary available as a feature
-
-allow ability for end user to add to the array/list (multiple adds seperated by commas)
-allow ability to edit list (word or phrase spelling)
-
-Jason Mooreisms Ipsum Generator List
-
+Future features: 
+  Allow ability for end user to add to the array/list (multiple adds seperated by commas)
+  Allow ability to edit list (word or phrase spelling)
+  Jason Mooreisms Ipsum Generator List
+  Dictionary of all phrases
+    A-Z tabs
 
 
-
-Footballers (TFFB) Ipsum Generator List
+Footballers (TFFB) Ipsum Generator List:
 Abdullah Express
 Andy
 Andy's Almost Upset of the Week
