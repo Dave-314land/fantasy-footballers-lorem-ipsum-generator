@@ -143,13 +143,14 @@ img {
 }
 
 .content-wrapper {
-  background-color: #000;
   margin: 0;
   width: 100%;
+  display: flex;
 }
 /* ----------------- Header ------------------ */
 
-header {
+.header-wrapper {
+  background-color: #000;
   align-items: center;
   display: flex;
   flex-flow: row wrap;
@@ -165,7 +166,6 @@ header {
   border-top: 1px #fff solid;
   margin: 0;
   width: 100%;
-
 }
 
 .title {
@@ -176,17 +176,26 @@ header {
 
 /* ----------------- Main ------------------ */
 
- main {
-  background: url('../img/background-image.png') center repeat;
-  background-size: contain;
+ .main-wrapper {
+  background-color: #b5b5b5;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-flow: row wrap;
+  height: auto;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .welcome-box {
   background-color: #42AB4E;
   border: 2px #000 solid;
   width: 90%;
+  margin: 5px;
 }
 
 .welcome-box h3 {
@@ -195,31 +204,44 @@ header {
   text-align: center;
 }
 
-.description {
+aside {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
   width: 90%;
+}
+
+.description {
+  margin: 5px 0;
 }
 
 .description p span {
   font-weight: bolder;
-  margin: 5px 0;
+  color: #000;
 }
 
 .description p {
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.5rem;
   margin: 0;
+  color: #000;
 }
 
-aside {
+.ipsum-generator {
+  margin: 5px 0;
+  height: 100px; 
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-around;
 }
 
-aside form {
-  border: 1px #000 solid;
+.generate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
 
 /* ==========================================================================
    Helper classes

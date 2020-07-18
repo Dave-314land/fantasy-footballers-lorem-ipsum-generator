@@ -9,6 +9,7 @@ Future features:
   Allow ability for end user to add to the array/list (multiple adds seperated by commas)
   Allow ability to edit list (word or phrase spelling)
   Jason Mooreisms Ipsum Generator List
+  Phrase of the day
   Dictionary of all phrases
     A-Z tabs
 
