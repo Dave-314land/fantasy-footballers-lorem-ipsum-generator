@@ -14,6 +14,8 @@ Future features:
     A-Z tabs
 
 
+Start with "Welcome In! It's football time! Hey!..."
+
 Footballers (TFFB) Ipsum Generator List:
 Abdullah Express
 Andy
@@ -25,6 +27,7 @@ Bonus
 Booty Scootin Cam Newtown
 Cardinals
 David Johnson woo-hoo-hoo!
+Don't hear what I'm not saying
 Double Stuff Oreos
 FF Hitman
 Fantasy
@@ -35,6 +38,8 @@ Fifty-Five!
 Footballers
 Footclan
 Footclan Assemble
+He was drafted to be great
+I apologize for nothing
 It's football time! Hey!
 Jason
 Jay Grizz
@@ -42,7 +47,7 @@ Josh Stallion (excellent!)
 Judge Giamatti
 Kenny G (so smooth)
 Lizard King
-Mail bagw
+Mail bag
 Major Payne
 Man bun
 Manilla Ice
@@ -66,6 +71,7 @@ This one comes in from
 Tony Meatballs
 Wanna play a game?
 Waterbet
+Weeeeeelcome In!
 What's it going to be McFly? Are you in or out?
 Wheel of Water
 Withstand Victories
