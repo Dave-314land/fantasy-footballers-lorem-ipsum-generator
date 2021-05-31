@@ -58,3 +58,23 @@ let loremIpsumDictionary = [
   `Wheel of Water`,
   `Withstand Victories`,
 ];
+
+let ballersArrayLength = loremIpsumDictionary.length;
+let text = 100;
+
+function getRandomNum(ballersArrayLength) {
+  return Math.floor(Math.random() * ballersArrayLength);
+}
+
+function getUserLoremIpsum() {
+  let userIpsumArray = [];
+  for (i = 0; i < text; i++) {
+    let randomIndex = getRandomNum(ballersArrayLength);
+    let wordToPush = loremIpsumDictionary[randomIndex];
+    console.log(wordToPush);
+    userIpsumArray.push(wordToPush);
+  }
+  console.log(userIpsumArray);
+}
+
+getUserLoremIpsum();
