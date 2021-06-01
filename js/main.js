@@ -73,22 +73,47 @@ let loremIpsumDictionary = [
   `Withstand Victories`,
 ];
 
+// Define variables
+const form = document.querySelector(".lorem-form");
+const numberofParagraphsRange = document.getElementById(
+  "numberOfParagraphsRange"
+);
+const numberOfParagraphsNumber = document.getElementById(
+  "numberOfParagraphsNumber"
+);
+
+const result = document.querySelector(".lorem-text");
 const ballersArrayLength = loremIpsumDictionary.length;
 let text = 100;
+
+// Load event listeners
+loadEventListeners();
+
+function loadEventListeners() {
+  form.addEventListener("submit", getUserLoremIpsum);
+  numberOfParagraphsNumber.addEventListener("input", syncParagraphNumbers);
+  numberofParagraphsRange.addEventListener("input", syncParagraphNumbers);
+}
+
+function syncParagraphNumbers(e) {
+  const value = e.target.value;
+  numberofParagraphsRange.value = value;
+  numberofParagraphsNumber.value = value;
+}
 
 function getRandomNum(ballersArrayLength) {
   return Math.floor(Math.random() * ballersArrayLength);
 }
 
-function getUserLoremIpsum() {
-  let userIpsumArray = [];
+function getUserLoremIpsum(e) {
+  let tempArray = [];
   for (i = 0; i < text; i++) {
     let randomIndex = getRandomNum(ballersArrayLength);
     let wordToPush = loremIpsumDictionary[randomIndex];
-    console.log(wordToPush);
-    userIpsumArray.push(wordToPush);
+    tempArray.push(wordToPush);
   }
-  console.log(userIpsumArray);
+  let userIpsumArray = tempArray.join(" ");
+  result.innerHTML = userIpsumArray;
+  result.classList.remove("hidden");
+  e.preventDefault();
 }
-
-getUserLoremIpsum();
