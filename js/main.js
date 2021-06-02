@@ -91,66 +91,36 @@ function loadEventListeners() {
   paragraphsRange.addEventListener("input", syncParagraphNumbers);
 }
 
+// Set the range slider and number input equal to the same value
 function syncParagraphNumbers(e) {
   const value = e.target.value;
   paragraphsRange.value = value;
   paragraphsNumber.value = value;
-  // let paragraphs = numberOfParagraphsNumber.value;
-
-  // return paragraphs;
 }
-/*
-function getNumParagraphs(paragraphs) {
-  //const value = e.target.value;
-  //numberOfParagraphsNumber.value = value;
-  let numberParagraphs = syncParagraphNumbers(paragraphs);
-  let numParagraphs = parseInt(numberParagraphs, 10);
-  if (numParagraphs === 1) {
-    textLength = 100;
-    console.log(`This is the text length value (should be 100): ${textLength}`);
-  } else if (numParagraphs === 2) {
-    textLength = 200;
-    console.log(`This is the text length value (should be 200): ${textLength}`);
-  } else if (numParagraphs === 3) {
-    textLength = 300;
-    console.log(`This is the text length value (should be 300): ${textLength}`);
-  } else if (numParagraphs === 4) {
-    textLength = 400;
-    console.log(`This is the text length value (should be 400): ${textLength}`);
-  } else {
-    textLength = 500;
-    console.log(`This is the text length value (should be 500): ${textLength}`);
-  }
-  return textLength;
-}
-*/
 
+// Generate random number based on the length of the ballers array
 function getRandomNum(ballersArrayLength) {
   return Math.floor(Math.random() * ballersArrayLength);
 }
 
 function getUserLoremIpsum(e) {
   let tempArray = [];
-  const value = paragraphsNumber.value;
-  let numParagraphs = parseInt(value, 10);
+  // Converting the paragraphsNumber.value variable into a number for later comparison
+  const numParagraphs = parseInt(paragraphsNumber.value);
+  // Setting the number of indecies to pull based on the number of paragraphs chosen by the user
   if (numParagraphs === 1) {
     textLength = 100;
-    console.log(`This is the text length value (should be 100): ${textLength}`);
   } else if (numParagraphs === 2) {
     textLength = 200;
-    console.log(`This is the text length value (should be 200): ${textLength}`);
   } else if (numParagraphs === 3) {
     textLength = 300;
-    console.log(`This is the text length value (should be 300): ${textLength}`);
   } else if (numParagraphs === 4) {
     textLength = 400;
-    console.log(`This is the text length value (should be 400): ${textLength}`);
   } else {
     textLength = 500;
-    console.log(`This is the text length value (should be 500): ${textLength}`);
   }
-  console.log(`This here be the text value: ${textLength}`);
-  console.log(typeof textLength);
+
+  // Until the number of indecies is reached, using the random number funtion to grab a random index from the ballers array and pushing it to a new array
   for (i = 0; i < textLength; i++) {
     let randomIndex = getRandomNum(ballersArrayLength);
     let wordToPush = loremIpsumDictionary[randomIndex];
@@ -174,10 +144,11 @@ function getUserLoremIpsum(e) {
     tempArray.splice(403, 0, "<br><br>");
   }
 
-  // Adding spaces between each index in the array
-  let userIpsumArray = tempArray.join(" ");
+  // adding spaces to the array by creating a new object via the join method
+  let userIpsum = tempArray.join(" ");
 
-  result.innerHTML = userIpsumArray;
+  // adding the text to the DOM and removing the hidden class to display the user's Fantasy Footballers Ipsum text
+  result.innerHTML = userIpsum;
   result.classList.remove("hidden");
   e.preventDefault();
 }
