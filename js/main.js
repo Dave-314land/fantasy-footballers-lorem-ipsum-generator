@@ -150,6 +150,11 @@ function isChecked() {
   }
 }
 
+function clearForm() {
+  result.classList.add("hidden");
+  form.reset();
+}
+
 //function startWithIpsum(e) {}
 
 function getUserLoremIpsum(e) {
