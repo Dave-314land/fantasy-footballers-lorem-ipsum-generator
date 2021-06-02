@@ -72,12 +72,21 @@
         </div>
         <label for="start-with">Start with "It's Football Time - Hey!"</label>
         <div><input type="checkbox" id="start-with" /></div>
+        <br />
+        <br />
         <button type="submit" class="btn">Generate</button>
-        <button type="button" class="btn" id="reset-btn" onClick="clearForm()">
-          Reset
-        </button>
+
+        <!-- <button type="button" class="btn" id="copy-btn">Copy</button> -->
       </form>
-      <article class="lorem-text hidden"></article>
+      <article class="lorem-text hidden" id="text-to-copy"></article>
+      <button
+        type="button"
+        class="btn hidden"
+        id="reset-btn"
+        onClick="clearForm()"
+      >
+        Reset
+      </button>
     </section>
 
     <!-- End of Main -->

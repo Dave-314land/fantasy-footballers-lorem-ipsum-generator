@@ -116,7 +116,9 @@ let loremIpsumDictionary = [
 // Define variables
 const ballersArrayLength = loremIpsumDictionary.length;
 const form = document.querySelector(".lorem-form");
-const result = document.querySelector(".lorem-text");
+const ipsumText = document.querySelector(".lorem-text");
+const resetBtn = document.getElementById("reset-btn");
+//const copyBtn = document.querySelector("#copy-btn"); // uncomment once innerHTML is recoded to remove line breaks
 const checkbox = document.querySelector("#start-with");
 const paragraphsRange = document.getElementById("numberOfParagraphsRange");
 const paragraphsNumber = document.getElementById("numberOfParagraphsNumber");
@@ -130,6 +132,7 @@ function loadEventListeners() {
   });
   paragraphsNumber.addEventListener("input", syncParagraphNumbers);
   paragraphsRange.addEventListener("input", syncParagraphNumbers);
+  //copyBtn.addEventListener("click", copy);  // uncomment once innerHTML is recoded to remove line breaks
 }
 
 // Set the range slider and number input equal to the same value
@@ -144,18 +147,30 @@ function getRandomNum(ballersArrayLength) {
   return Math.floor(Math.random() * ballersArrayLength);
 }
 
+// Checking if checkbox is checked to use in getUserLoremIpsum function
 function isChecked() {
   if (checkbox.checked) {
     return true;
   }
 }
 
+// Calling clearForm in index.html on reset button to reset the form, clear the user's ipsum text and hide the div
 function clearForm() {
-  result.classList.add("hidden");
+  ipsumText.innerHTML = "";
+  ipsumText.classList.add("hidden");
+  resetBtn.classList.add("hidden");
   form.reset();
 }
 
-//function startWithIpsum(e) {}
+/* Hiding for now until I recode the innerHTML to remove the line breaks when copy occurs
+
+// Adding copy to clipboard functionality through the use of the Clipboard API
+async function copy() {
+  const copyText = ipsumText.innerHTML;
+  await navigator.clipboard.writeText(copyText);
+  setTimeout(alert("TFFB Ipsum copied"), 3000);
+}
+*/
 
 function getUserLoremIpsum(e) {
   let tempArray = [];
@@ -215,7 +230,8 @@ function getUserLoremIpsum(e) {
   let userIpsum = tempArray.join(" ");
 
   // Adding the text to the DOM and removing the hidden class to display the user's Fantasy Footballers Ipsum text
-  result.innerHTML = userIpsum;
-  result.classList.remove("hidden");
+  ipsumText.innerHTML = userIpsum;
+  ipsumText.classList.remove("hidden");
+  resetBtn.classList.remove("hidden");
   e.preventDefault();
 }
