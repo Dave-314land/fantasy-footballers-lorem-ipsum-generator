@@ -101,7 +101,8 @@ let loremIpsumDictionary = [
   `The Flying V`,
   `The Infinity Stone`,
   `The moose is loose`,
-  `The Post Man``This one comes in from`,
+  `The Post Man`,
+  `This one comes in from`,
   `Tony Meatballs`,
   `Trash Man`,
   `Turok, the dinosaur hunter, Cohen`,
@@ -117,11 +118,11 @@ let loremIpsumDictionary = [
 
 // Define variables
 const ballersArrayLength = loremIpsumDictionary.length;
-const form = document.querySelector(".lorem-form");
+const form = document.querySelector("#lorem-form");
 const ipsumText = document.querySelector(".lorem-text");
 const resetBtn = document.getElementById("reset-btn");
 //const copyBtn = document.querySelector("#copy-btn"); // uncomment once innerHTML is recoded to remove line breaks
-const checkbox = document.querySelector("#start-with");
+const checkbox = document.querySelector("#start-with-checkbox");
 const paragraphsRange = document.getElementById("numberOfParagraphsRange");
 const paragraphsNumber = document.getElementById("numberOfParagraphsNumber");
 
@@ -132,17 +133,19 @@ function loadEventListeners() {
   form.addEventListener("submit", (e) => {
     getUserLoremIpsum(e);
   });
-  paragraphsNumber.addEventListener("input", syncParagraphNumbers);
-  paragraphsRange.addEventListener("input", syncParagraphNumbers);
+  //paragraphsNumber.addEventListener("input", syncParagraphNumbers); // no longer need this after removing range input
+  //paragraphsRange.addEventListener("input", syncParagraphNumbers); // no longer need this after removing range input
   //copyBtn.addEventListener("click", copy);  // uncomment once innerHTML is recoded to remove line breaks
 }
 
+/*
 // Set the range slider and number input equal to the same value
 function syncParagraphNumbers(e) {
   const value = e.target.value;
   paragraphsRange.value = value;
   paragraphsNumber.value = value;
 }
+*/
 
 // Generate random number based on the length of the ballers array
 function getRandomNum(ballersArrayLength) {
@@ -180,21 +183,17 @@ function getUserLoremIpsum(e) {
   const numParagraphs = parseInt(paragraphsNumber.value);
   // Setting the number of indecies to pull based on the number of paragraphs chosen by the user
   if (numParagraphs === 1) {
-    textLength = 60;
+    textLength = 50;
   } else if (numParagraphs === 2) {
-    textLength = 120;
+    textLength = 100;
   } else if (numParagraphs === 3) {
-    textLength = 180;
-  } else if (numParagraphs === 4) {
-    textLength = 240;
+    textLength = 150;
   } else {
-    textLength = 300;
+    textLength = 200;
   }
-  console.log(isChecked());
-
-  // If user selected "Start with 'It's Football Time - Hey!'", insert this phrase in the zero index of the tempArray.
+  // If user selected "Start with 'It's Football Time'", insert this phrase in the zero index of the tempArray.
   if (isChecked()) {
-    tempArray = [`It's Football Time - Hey!`];
+    tempArray = [`It's Football Time`];
 
     // Until the number of indecies is reached, using the random number funtion to grab a random index from the ballers array and pushing it to a new array starting at the index of 1
     for (i = 1; i < textLength; i++) {
@@ -212,20 +211,15 @@ function getUserLoremIpsum(e) {
   }
 
   // Adding line breaks based on length of returned array to represent paragraphs
-  if (tempArray.length === 120) {
-    tempArray.splice(60, 0, "<br><br>");
-  } else if (tempArray.length === 180) {
-    tempArray.splice(60, 0, "<br><br>");
-    tempArray.splice(121, 0, "<br><br>");
-  } else if (tempArray.length === 240) {
-    tempArray.splice(60, 0, "<br><br>");
-    tempArray.splice(121, 0, "<br><br>");
-    tempArray.splice(182, 0, "<br><br>");
-  } else if (tempArray.length === 300) {
-    tempArray.splice(60, 0, "<br><br>");
-    tempArray.splice(121, 0, "<br><br>");
-    tempArray.splice(182, 0, "<br><br>");
-    tempArray.splice(243, 0, "<br><br>");
+  if (tempArray.length === 100) {
+    tempArray.splice(50, 0, "<br><br>");
+  } else if (tempArray.length === 150) {
+    tempArray.splice(50, 0, "<br><br>");
+    tempArray.splice(101, 0, "<br><br>");
+  } else {
+    tempArray.splice(50, 0, "<br><br>");
+    tempArray.splice(101, 0, "<br><br>");
+    tempArray.splice(152, 0, "<br><br>");
   }
 
   // Adding spaces to the array by creating a new object via the join method
