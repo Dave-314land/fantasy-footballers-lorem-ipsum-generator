@@ -87,10 +87,18 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-#cover {
+#bg-image {
   background: url("../img/background-image-cover.png") center center no-repeat;
   background-size: cover;
-  height: 125vh;
+  height: 150vh;
+}
+
+.spacer {
+  height: 20vh;
+}
+
+#cover {
+  height: auto;
   text-align: center;
   display: flex;
   align-items: center;
@@ -203,9 +211,49 @@ form:before {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+/* Extra small devices (landscape phones, below 576px) */
+@media (max-width: 575.98px) {
+  #bg-image {
+    background: url("../img/background-image-cover.png") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+}
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  #bg-image {
+    background: url("../img/background-image-cover.png") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #bg-image {
+    background: url("../img/background-image-cover.png") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #bg-image {
+    background: url("../img/background-image-cover.png") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #bg-image {
+    background: url("../img/background-image-cover.png") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
 }
 
 @media print,

@@ -36,34 +36,45 @@
   </head>
 
   <body>
-    <section id="cover" class="vh125">
-      <div id="cover-caption">
-        <div class="container">
-          <div class="row text-white">
-            <div
-              class="
-                col-xl-10 col-lg-6 col-md-8 col-sm-10
-                mx-auto
-                text-center
-                form
-                py-2
-              "
-            >
-              <h1 class="display-1 my-3">Welcome to TFFB Ipsum</h1>
-              <p class="lead mb-5">
-                Tired of boring lorem ipsum? Energize your content with phrases
-                straight from The Fantasy Footballers Podcast!
-              </p>
-              <div class="px-5">
-                <!-- form -->
-                <form id="lorem-form" onSubmit="return isChecked()">
-                  <div class="row align-items-center">
-                    <div class="col-4 d-flex justify-content-end">
-                      <label for="number-of-paragraphs" class="form-label fs-4"
-                        >Paragraphs</label
+    <section id="bg-image">
+      <header class="spacer"></header>
+      <section id="cover" class="vh100">
+        <div id="cover-caption">
+          <div class="container">
+            <div class="row text-white">
+              <div
+                class="
+                  container-xl container-lg container-md container-sm
+                  mx-auto
+                  text-center
+                  form
+                  py-2
+                "
+              >
+                <!-- col-xl-12 col-lg-6 col-md-8 col-sm-10 -->
+                <h1 class="display-1 my-3">Welcome to TFFB Ipsum</h1>
+                <p class="col-xl-12 col-lg-12 col-md-12 col-sm-12 lead mb-5">
+                  Tired of boring lorem ipsum? Energize your content with
+                  phrases straight from The Fantasy Footballers Podcast!
+                </p>
+                <div class="px-5">
+                  <!-- form -->
+                  <form id="lorem-form" onSubmit="return isChecked()">
+                    <div class="row align-items-center">
+                      <div
+                        class="
+                          col-xl-4 col-lg-6 col-md-6 col-sm-6 col-6
+                          d-flex
+                          justify-content-end
+                        "
                       >
-                    </div>
-                    <!-- removing range slider
+                        <label
+                          for="number-of-paragraphs"
+                          class="form-label fs-4"
+                          >Paragraphs</label
+                        >
+                      </div>
+                      <!-- removing range slider
                     <div class="col-3 number-of-paragraphs">
                       <input
                         type="range"
@@ -76,87 +87,104 @@
                       />
                     </div>
                      -->
+                      <div
+                        class="
+                          col-xl-1 col-lg-2 col-md-2 col-sm-2 col-3
+                          d-flex
+                          justify-content-start
+                          number-of-paragraphs
+                        "
+                      >
+                        <input
+                          type="number"
+                          class="form-control"
+                          id="numberOfParagraphsNumber"
+                          min="1"
+                          max="4"
+                          value="3"
+                          aria-describedby="numberOfParagraphsNumber"
+                        />
+                      </div>
+                      <!-- closing number-of-paragraphs -->
+                      <div
+                        class="
+                          col-xl-4 col-lg-6 col-md-6 col-sm-6 col-6
+                          d-flex
+                          ms-2
+                          justify-content-end
+                        "
+                      >
+                        <label
+                          class="form-check-label fs-4"
+                          for="start-with-checkbox"
+                          >Start with "It's Football Time"</label
+                        >
+                      </div>
+                      <div
+                        class="
+                          col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3
+                          d-flex
+                          justify-content-start
+                          py-4
+                        "
+                      >
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="start-with-checkbox"
+                        />
+                      </div>
+                      <!-- closing start-with-checkbox -->
+                    </div>
+                    <!-- closing grid row -->
                     <div
                       class="
-                        col-1
-                        d-flex
-                        justify-content-start
-                        number-of-paragraphs
+                        d-grid
+                        gap-3
+                        d-lg-flex
+                        justify-content-md-center
+                        my-3
                       "
                     >
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="numberOfParagraphsNumber"
-                        min="1"
-                        max="4"
-                        value="3"
-                        aria-describedby="numberOfParagraphsNumber"
-                      />
-                    </div>
-                    <!-- closing number-of-paragraphs -->
-                    <div class="col-4 d-flex ms-2 justify-content-end">
-                      <label
-                        class="form-check-label fs-4"
-                        for="start-with-checkbox"
-                        >Start with "It's Football Time"</label
+                      <button type="submit" class="btn btn-light btn-lg">
+                        Generate
+                      </button>
+                      <!-- <button type="button" class="btn" id="copy-btn">Copy</button> -->
+                      <button
+                        type="button"
+                        class="btn btn-light btn-lg hidden"
+                        id="reset-btn"
+                        onClick="clearForm()"
                       >
+                        Reset
+                      </button>
                     </div>
-                    <div class="col-2 d-flex justify-content-start">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="start-with-checkbox"
-                      />
-                    </div>
-                    <!-- closing start-with-checkbox -->
-                  </div>
-                  <!-- closing grid row -->
-                  <div
-                    class="
-                      d-grid
-                      gap-3
-                      d-lg-flex
-                      justify-content-md-center
-                      my-3
-                    "
-                  >
-                    <button type="submit" class="btn btn-light btn-lg">
-                      Generate
-                    </button>
-                    <!-- <button type="button" class="btn" id="copy-btn">Copy</button> -->
-                    <button
-                      type="button"
-                      class="btn btn-light btn-lg hidden"
-                      id="reset-btn"
-                      onClick="clearForm()"
-                    >
-                      Reset
-                    </button>
-                  </div>
-                </form>
+                  </form>
+                </div>
+                <!-- closing px-2 -->
+                <section
+                  class="
+                    container
+                    col-xl-12 col-lg-12 col-md-10 col-sm-10 col-10
+                    mt-3
+                    mb-5
+                    text-start
+                    lorem-text
+                    hidden
+                    overflow-auto
+                  "
+                  id="text-to-copy"
+                ></section>
+                <!-- closing lorem-text section -->
               </div>
-              <!-- closing px-2 -->
-              <section
-                class="
-                  container
-                  mt-3
-                  text-start
-                  lorem-text
-                  hidden
-                  overflow-auto
-                "
-                id="text-to-copy"
-              ></section>
-              <!-- closing lorem-text section -->
+              <!-- closing col-xl-6 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 -->
             </div>
-            <!-- closing col-xl-6 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 -->
+            <!-- closing row text-white -->
           </div>
-          <!-- closing row text-white -->
+          <!-- closing container -->
         </div>
-        <!-- closing container -->
-      </div>
-      <!-- closing cover caption -->
+        <!-- closing cover caption -->
+      </section>
     </section>
     <!-- footer -->
     <footer class="footer mt-auto py-3 bg-light">
