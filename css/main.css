@@ -88,8 +88,7 @@ textarea {
    ========================================================================== */
 
 #cover {
-  background: #222 url("../img/background-image-cover.png") center center
-    no-repeat;
+  background: url("../img/background-image-cover.png") center center no-repeat;
   background-size: cover;
   height: 125vh;
   text-align: center;
@@ -115,11 +114,6 @@ form:before {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: -1;
   border-radius: 10px;
-}
-
-.lorem-text {
-  background-color: none;
-  text-decoration: none;
 }
 
 /* ==========================================================================
