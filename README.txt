@@ -11,8 +11,7 @@ Future possible features:
   Dictionary of all phrases
     A-Z tabs
 
-
-Start with "It's Football Time"
+Allows user to start generated ipsum with "It's Football Time"
 
 Footballers (TFFB) Ipsum Generator Dictionary:
   Abdullah Express
