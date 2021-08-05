@@ -132,6 +132,9 @@ loadEventListeners();
 function loadEventListeners() {
   form.addEventListener("submit", (e) => {
     getUserLoremIpsum(e);
+  resetBtn.addEventListener("click", ()=>{
+    clearForm();
+  })
   });
   //paragraphsNumber.addEventListener("input", syncParagraphNumbers); // no longer need this after removing range input
   //paragraphsRange.addEventListener("input", syncParagraphNumbers); // no longer need this after removing range input
